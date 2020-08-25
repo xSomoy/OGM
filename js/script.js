@@ -29,25 +29,100 @@ var personal = 60;
 var buffer = 60;
 var working = 0;
 
+// Toggle Functions
 
 function Work() {
-    var button = document.getElementById('workButton').style.background;
-    var color = '';
-    alert(work);
+    var status = document.getElementById('workButton').innerText;
+    if ( status == "Work") {
+        document.getElementById('workButton').innerHTML = 'Work Time';
+        document.getElementById('workButton').style.background = 'green';
 
-    if (color !== 'green') {
-        color = 'green';
-        document.getElementById('workButton').style.background = color;
+    } else if (status == "Work Time") {
+        document.getElementById('workButton').innerHTML = 'Work';
+        document.getElementById('workButton').style.background = 'red';
 
-    } else if (color == 'green') {
-        color = 'red';
-        document.getElementById('workButton').style.background = color;
+    }
+}
+
+function Sleep() {
+    var status = document.getElementById('sleepButton').innerText;
+    if ( status == "Sleep") {
+        document.getElementById('sleepButton').innerHTML = 'Sleep Time';
+        document.getElementById('sleepButton').style.background = 'green';
+
+    } else if (status == "Sleep Time") {
+        document.getElementById('sleepButton').innerHTML = 'Sleep';
+        document.getElementById('sleepButton').style.background = 'red';
+
+    }
+}
+
+function General() {
+    var status = document.getElementById('generalButton').innerText;
+    if ( status == "General") {
+        document.getElementById('generalButton').innerHTML = 'General Time';
+        document.getElementById('generalButton').style.background = 'green';
+
+    } else if (status == "General Time") {
+        document.getElementById('generalButton').innerHTML = 'General';
+        document.getElementById('generalButton').style.background = 'red';
+
+    }
+}
+
+function Reading() {
+    var status = document.getElementById('readingButton').innerText;
+    if ( status == "Reading") {
+        document.getElementById('readingButton').innerHTML = 'Reading Time';
+        document.getElementById('readingButton').style.background = 'green';
+
+    } else if (status == "Reading Time") {
+        document.getElementById('readingButton').innerHTML = 'Read';
+        document.getElementById('readingButton').style.background = 'red';
+
+    }
+}
+
+function SocialMedia() {
+    var status = document.getElementById('socialMediaButton').innerText;
+    if ( status == "Social Media") {
+        document.getElementById('socialMediaButton').innerHTML = 'Social Media Time';
+        document.getElementById('socialMediaButton').style.background = 'green';
+
+    } else if (status == "Social Media Time") {
+        document.getElementById('socialMediaButton').innerHTML = 'Social Media';
+        document.getElementById('socialMediaButton').style.background = 'red';
+
+    }
+}
+
+function Personal() {
+    var status = document.getElementById('personalButton').innerText;
+    if ( status == "Personal") {
+        document.getElementById('personalButton').innerHTML = 'Personal Time';
+        document.getElementById('personalButton').style.background = 'green';
+
+    } else if (status == "Personal Time") {
+        document.getElementById('personalButton').innerHTML = 'Personal';
+        document.getElementById('personalButton').style.background = 'red';
+
+    }
+}
+
+function Buffer() {
+    var status = document.getElementById('bufferButton').innerText;
+    if ( status == "Buffer") {
+        document.getElementById('bufferButton').innerHTML = 'Buffer Time';
+        document.getElementById('bufferButton').style.background = 'green';
+
+    } else if (status == "Buffer Time") {
+        document.getElementById('bufferButton').innerHTML = 'Buffer';
+        document.getElementById('bufferButton').style.background = 'red';
 
     }
 }
 
 
-//document.getElementById("demo2").innerHTML = working;
 
 // Time Sections
 
