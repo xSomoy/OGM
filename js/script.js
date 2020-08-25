@@ -31,11 +31,18 @@ var working = 0;
 
 
 function Work() {
-    var x = document.getElementById("workButton").innerText;
-    if (x == 'Work') {
-        document.getElementById("workButton").innerHTML = 'Work Active';
-    } else {
-        document.getElementById("workButton").innerHTML = 'Work';
+    var button = document.getElementById('workButton').style.background;
+    var color = '';
+    alert(work);
+
+    if (color !== 'green') {
+        color = 'green';
+        document.getElementById('workButton').style.background = color;
+
+    } else if (color == 'green') {
+        color = 'red';
+        document.getElementById('workButton').style.background = color;
+
     }
 }
 
