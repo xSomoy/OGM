@@ -1,3 +1,5 @@
+// Main Counter Start
+
 setInterval(minCounter, 500);
 
 function minCounter() {
@@ -11,3 +13,6 @@ function minCounter() {
     document.getElementById("time").innerHTML = minGone + ':' + s;
     document.getElementById("left").innerHTML = minLeft + ':' + inSec;
 }
+
+// Main Counter End
+
