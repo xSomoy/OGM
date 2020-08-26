@@ -8,7 +8,7 @@ const socialButton = document.getElementById('socialButton');
 const personalButton = document.getElementById('personalButton');
 const bufferButton = document.getElementById('bufferButton');
 
-var work = 666;
+//var work = 666;
 var sleep = 420;
 var general = 120;
 var reading = 60;
@@ -34,12 +34,29 @@ setInterval(minCounter, 500);
 // Main Counter End
 
 //Time Sections
+document.getElementById("workTime").innerHTML = 666;
+function workCounter() {
+    
+    var now = new moment();
+    var m = now.format("mm");
+    var status = workButton.innerText;
+    if (status == 'Work Time') {
+        var work = 666;
+        var work = work - Number(m);
+        document.getElementById("workTime").innerHTML = work;
+    } else {
+        var work = document.getElementById("workTime").innerHTML;
+        document.getElementById("workTime").innerHTML = work;
+    }
+}
+setInterval(workCounter, 500);
+//setTimeout(workCounter, 10000);
 
 
 
 
 
-document.getElementById("work").innerHTML = 'Work Min Left: ' + work;
+
 document.getElementById("sleep").innerHTML = 'Sleep Min Left: ' + sleep;
 document.getElementById("general").innerHTML = 'General Min Left: ' + general;
 document.getElementById("reading").innerHTML = 'Reading Min Left: ' + reading;
