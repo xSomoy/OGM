@@ -39,7 +39,7 @@ setInterval(minCounter, 500);
 
 
 
-//document.getElementById("work").innerHTML = 'Work Min Left: ' + work;
+document.getElementById("work").innerHTML = 'Work Min Left: ' + work;
 document.getElementById("sleep").innerHTML = 'Sleep Min Left: ' + sleep;
 document.getElementById("general").innerHTML = 'General Min Left: ' + general;
 document.getElementById("reading").innerHTML = 'Reading Min Left: ' + reading;
