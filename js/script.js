@@ -33,20 +33,20 @@ const bufferButton = document.getElementById('bufferButton');
 function Work() {
     var status = workButton.innerText;
     if (status == "Work") {
-        
+
         workButton.innerHTML = 'Work Time';
         workButton.style.background = 'green';
 
         // Toggle Other Button
-        
+
         sleepButton.innerHTML = 'Sleep';
         sleepButton.style.background = 'red';
 
         generalButton.innerHTML = 'General';
         generalButton.style.background = 'red';
 
-        readingButtton.innerHTML = 'Read';
-        readingButtton.style.background = 'red';
+        readingButton.innerHTML = 'Reading';
+        readingButton.style.background = 'red';
 
         socialButton.innerHTML = 'Social';
         socialButton.style.background = 'red';
@@ -68,20 +68,20 @@ function Work() {
 function Sleep() {
     var status = sleepButton.innerText;
     if (status == "Sleep") {
-        
+
         sleepButton.innerHTML = 'Sleep Time';
         sleepButton.style.background = 'green';
-        
-         // Toggle Other Button
-        
+
+        // Toggle Other Button
+
         workButton.innerHTML = 'Work';
         workButton.style.background = 'red';
 
         generalButton.innerHTML = 'General';
         generalButton.style.background = 'red';
 
-        readingButtton.innerHTML = 'Read';
-        readingButtton.style.background = 'red';
+        readingButton.innerHTML = 'Reading';
+        readingButton.style.background = 'red';
 
         socialButton.innerHTML = 'Social';
         socialButton.style.background = 'red';
@@ -102,20 +102,20 @@ function Sleep() {
 function General() {
     var status = generalButton.innerText;
     if (status == "General") {
-        
+
         generalButton.innerHTML = 'General Time';
         generalButton.style.background = 'green';
-        
-         // Toggle Other Button
-        
+
+        // Toggle Other Button
+
         sleepButton.innerHTML = 'Sleep';
         sleepButton.style.background = 'red';
 
         workButton.innerHTML = 'Work';
         workButton.style.background = 'red';
 
-        readingButtton.innerHTML = 'Read';
-        readingButtton.style.background = 'red';
+        readingButton.innerHTML = 'Reading';
+        readingButton.style.background = 'red';
 
         socialButton.innerHTML = 'Social';
         socialButton.style.background = 'red';
@@ -134,21 +134,22 @@ function General() {
 }
 
 function Reading() {
-    var status = readingButtton.innerText;
+    var status = readingButton.innerText;
     if (status == "Reading") {
-        readingButtton.innerHTML = 'Reading Time';
-        readingButtton.style.background = 'green';
-        
-         // Toggle Other Button
-        
+
+        readingButton.innerHTML = 'Reading Time';
+        readingButton.style.background = 'green';
+
+        // Toggle Other Button
+
         sleepButton.innerHTML = 'Sleep';
         sleepButton.style.background = 'red';
 
+        workButton.innerHTML = 'Work';
+        workButton.style.background = 'red';
+
         generalButton.innerHTML = 'General';
         generalButton.style.background = 'red';
-
-        workButtton.innerHTML = 'Work';
-        workButtton.style.background = 'red';
 
         socialButton.innerHTML = 'Social';
         socialButton.style.background = 'red';
@@ -160,8 +161,8 @@ function Reading() {
         bufferButton.style.background = 'red';
 
     } else if (status == "Reading Time") {
-        readingButtton.innerHTML = 'Read';
-        readingButtton.style.background = 'red';
+        generalButton.innerHTML = 'Reading';
+        generalButton.style.background = 'red';
 
     }
 }
@@ -169,22 +170,23 @@ function Reading() {
 function Social() {
     var status = socialButton.innerText;
     if (status == "Social") {
+
         socialButton.innerHTML = 'Social Time';
         socialButton.style.background = 'green';
-        
-         // Toggle Other Button
-        
+
+        // Toggle Other Button
+
         sleepButton.innerHTML = 'Sleep';
         sleepButton.style.background = 'red';
+
+        workButton.innerHTML = 'Work';
+        workButton.style.background = 'red';
 
         generalButton.innerHTML = 'General';
         generalButton.style.background = 'red';
 
-        readingButtton.innerHTML = 'Read';
-        readingButtton.style.background = 'red';
-
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
+        readingButton.innerHTML = 'Reading';
+        readingButton.style.background = 'red';
 
         personalButton.innerHTML = 'Personal';
         personalButton.style.background = 'red';
@@ -193,34 +195,36 @@ function Social() {
         bufferButton.style.background = 'red';
 
     } else if (status == "Social Time") {
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
+        generalButton.innerHTML = 'Social';
+        generalButton.style.background = 'red';
 
     }
 }
 
+
 function Personal() {
     var status = personalButton.innerText;
     if (status == "Personal") {
+
         personalButton.innerHTML = 'Personal Time';
         personalButton.style.background = 'green';
-        
-         // Toggle Other Button
-        
+
+        // Toggle Other Button
+
         sleepButton.innerHTML = 'Sleep';
         sleepButton.style.background = 'red';
+
+        workButton.innerHTML = 'Work';
+        workButton.style.background = 'red';
 
         generalButton.innerHTML = 'General';
         generalButton.style.background = 'red';
 
-        readingButtton.innerHTML = 'Read';
-        readingButtton.style.background = 'red';
+        readingButton.innerHTML = 'Reading';
+        readingButton.style.background = 'red';
 
         socialButton.innerHTML = 'Social';
         socialButton.style.background = 'red';
-
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
 
         bufferButton.innerHTML = 'Buffer';
         bufferButton.style.background = 'red';
@@ -232,31 +236,33 @@ function Personal() {
     }
 }
 
+
 function Buffer() {
     var status = bufferButton.innerText;
     if (status == "Buffer") {
+
         bufferButton.innerHTML = 'Buffer Time';
         bufferButton.style.background = 'green';
-        
-         // Toggle Other Button
-        
+
+        // Toggle Other Button
+
         sleepButton.innerHTML = 'Sleep';
         sleepButton.style.background = 'red';
+
+        workButton.innerHTML = 'Work';
+        workButton.style.background = 'red';
 
         generalButton.innerHTML = 'General';
         generalButton.style.background = 'red';
 
-        readingButtton.innerHTML = 'Read';
-        readingButtton.style.background = 'red';
+        readingButton.innerHTML = 'Reading';
+        readingButton.style.background = 'red';
 
         socialButton.innerHTML = 'Social';
         socialButton.style.background = 'red';
 
         personalButton.innerHTML = 'Personal';
         personalButton.style.background = 'red';
-
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
 
     } else if (status == "Buffer Time") {
         bufferButton.innerHTML = 'Buffer';
