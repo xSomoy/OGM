@@ -1,4 +1,4 @@
-// Main Counter Start
+// Declaring Constants
 
 const workButton = document.getElementById('workButton');
 const sleepButton = document.getElementById('sleepButton');
@@ -8,14 +8,7 @@ const socialButton = document.getElementById('socialButton');
 const personalButton = document.getElementById('personalButton');
 const bufferButton = document.getElementById('bufferButton');
 
-//var work = 666;
-var sleep = 420;
-var general = 120;
-var reading = 60;
-var socialMedia = 54;
-var personal = 60;
-var buffer = 60;
-var working = 0;
+// Main Min Counter
 
 function minCounter() {
     var now = new moment();
@@ -31,26 +24,9 @@ function minCounter() {
 
 setInterval(minCounter, 500);
 
-// Main Counter End
 
-//Time Sections
-document.getElementById("workTime").innerHTML = 666;
-function workCounter() {
-    
-    var now = new moment();
-    var m = now.format("mm");
-    var status = workButton.innerText;
-    if (status == 'Work Time') {
-        var work = 666;
-        var work = work - Number(m);
-        document.getElementById("workTime").innerHTML = work;
-    } else {
-        var work = document.getElementById("workTime").innerHTML;
-        document.getElementById("workTime").innerHTML = work;
-    }
-}
-setInterval(workCounter, 500);
-//setTimeout(workCounter, 10000);
+
+
 
 
 
@@ -65,7 +41,6 @@ document.getElementById("personal").innerHTML = 'Perosonal Min Left: ' + persona
 document.getElementById("buffer").innerHTML = 'Buffer Min Left: ' + buffer;
 
 
-// Function Section
 
 
 
@@ -311,3 +286,25 @@ function Buffer() {
 
     }
 }
+
+//Wrok Section
+
+document.getElementById("workTime").innerHTML = 666;
+var workTime = document.getElementById("workTime").innerHTML;
+
+function workTimer() {
+    workTime = workTime - 1;
+    document.getElementById("workTime").innerHTML = workTime;
+}
+
+function workCounter() {
+    var status = workButton.innerText;
+    if (status == 'Work Time') {
+        workTimer();
+
+    } else {
+        var work = document.getElementById("workTime").innerHTML;
+        document.getElementById("workTime").innerHTML = work;
+    }
+}
+setInterval(workCounter, 6000);
