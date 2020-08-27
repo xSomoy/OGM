@@ -24,26 +24,6 @@ function minCounter() {
 
 setInterval(minCounter, 500);
 
-
-
-
-
-
-
-
-
-
-document.getElementById("sleep").innerHTML = 'Sleep Min Left: ' + sleep;
-document.getElementById("general").innerHTML = 'General Min Left: ' + general;
-document.getElementById("reading").innerHTML = 'Reading Min Left: ' + reading;
-document.getElementById("socialMedia").innerHTML = 'SocialMin Left: ' + socialMedia;
-document.getElementById("personal").innerHTML = 'Perosonal Min Left: ' + personal;
-document.getElementById("buffer").innerHTML = 'Buffer Min Left: ' + buffer;
-
-
-
-
-
 // Toggle Functions
 
 function Work() {
