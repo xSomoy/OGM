@@ -272,7 +272,7 @@ function Buffer() {
 document.getElementById("workTime").innerHTML = 666;
 var workTime = document.getElementById("workTime").innerHTML;
 
-function workTimer() {
+function Timer() {
     workTime = workTime - 1;
     document.getElementById("workTime").innerHTML = workTime;
 }
@@ -280,11 +280,34 @@ function workTimer() {
 function workCounter() {
     var status = workButton.innerText;
     if (status == 'Work Time') {
-        workTimer();
+        Timer();
 
     } else {
         var work = document.getElementById("workTime").innerHTML;
         document.getElementById("workTime").innerHTML = work;
+    }
+}
+setInterval(workCounter, 6000);
+
+
+//Sleep Section
+
+document.getElementById("sleepTime").innerHTML = 420;
+var workTime = document.getElementById("sleepTime").innerHTML;
+
+function Timer() {
+    workTime = workTime - 1;
+    document.getElementById("sleepTime").innerHTML = workTime;
+}
+
+function workCounter() {
+    var status = sleepButton.innerText;
+    if (status == 'Sleep Time') {
+        Timer();
+
+    } else {
+        var work = document.getElementById("sleepTime").innerHTML;
+        document.getElementById("sleepTime").innerHTML = work;
     }
 }
 setInterval(workCounter, 6000);
