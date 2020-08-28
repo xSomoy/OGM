@@ -44,14 +44,12 @@ setInterval(minCounter, 500);
 
 function timePenalty() {
     oldGypsyMan = minCounter();
-//    penaltyTime = oldGypsyMan[0];
-    penaltyTime = 20;
+    penaltyTime = oldGypsyMan[0];
     leftTime = oldGypsyMan[1];
-    console.log(leftTime);
     switch (true) {
 
         case penaltyTime > 666: {
-            workTime.innerHTML = 666 - (666 - leftTime);
+            workTime.innerHTML = 666 - (666 - penaltyTime);
             sleepTime.innerHTML = 0;
             generalTime.innerHTML = 0;
             readingTime.innerHTML = 0;
@@ -63,7 +61,7 @@ function timePenalty() {
 
         case penaltyTime > 420: {
             workTime.innerHTML = 666;
-            sleepTime.innerHTML = 420 - (420 - leftTime);
+            sleepTime.innerHTML = 420 - (420 - penaltyTime);
             generalTime.innerHTML = 0;
             readingTime.innerHTML = 0;
             socialTime.innerHTML = 0;
@@ -75,7 +73,7 @@ function timePenalty() {
         case penaltyTime > 120: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
-            generalTime.innerHTML = 120 - (120 - leftTime);
+            generalTime.innerHTML = 120 - (120 - penaltyTime);
             readingTime.innerHTML = 0;
             socialTime.innerHTML = 0;
             personalTime.innerHTML = 0;
@@ -89,7 +87,7 @@ function timePenalty() {
             generalTime.innerHTML = 60;
             readingTime.innerHTML = 60;
             socialTime.innerHTML = 0;
-            personalTime.innerHTML = 60 - (60 - leftTime);
+            personalTime.innerHTML = 60 - (60 - penaltyTime);
             bufferTime.innerHTML = 0;
             break;
         }
@@ -100,7 +98,7 @@ function timePenalty() {
             readingTime.innerHTML = 60;
             socialTime.innerHTML = 54;
             personalTime.innerHTML = 60;
-            bufferTime.innerHTML = 60 - (60 - leftTime);
+            bufferTime.innerHTML = 60 - (60 - penaltyTime);
             break;
         }
     }
