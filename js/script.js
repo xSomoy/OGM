@@ -91,15 +91,6 @@ function timePenalty() {
             socialTime.innerHTML = 0;
             personalTime.innerHTML = 60 - (60 - leftTime);
             bufferTime.innerHTML = 0;
-//            if (personalTime.innerHTML == 0) {
-//                orkTime.innerHTML = 666;
-//                sleepTime.innerHTML = 420;
-//                generalTime.innerHTML = 60;
-//                readingTime.innerHTML = 60 ( 120 - leftTime);
-//                socialTime.innerHTML = 0;
-//                personalTime.innerHTML = 60;
-//                bufferTime.innerHTML = 0;
-//            }
             break;
         }
         case penaltyTime <= 60: {
@@ -119,7 +110,7 @@ function timePenalty() {
 // Time Set
 
 function timeSet() {
-    if ((h + m + s) == 0) {
+    if (Number(h+m+s) == 0) {
         workTime.innerHTML = 666;
         sleepTime.innerHTML = 420;
         generalTime.innerHTML = 120;
