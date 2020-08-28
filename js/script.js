@@ -8,13 +8,15 @@ const socialButton = document.getElementById('socialButton');
 const personalButton = document.getElementById('personalButton');
 const bufferButton = document.getElementById('bufferButton');
 
+// Declaring Variables
+var now = new moment();
+var s = now.format("ss");
+var h = now.format("HH");
+var m = now.format("mm");
+
 // Main Min Counter
 
 function minCounter() {
-    var now = new moment();
-    var s = now.format("ss");
-    var h = now.format("HH");
-    var m = now.format("mm");
     var minGone = ((h * 60) + Number(m));
     var minLeft = 1440 - Number(minGone);
     var inSec = 60 - Number(s);
@@ -23,6 +25,25 @@ function minCounter() {
 }
 
 setInterval(minCounter, 500);
+
+
+// Time Set
+
+function timeSet() {
+    if ((h+m+s) == 0){
+        document.getElementById("workTime").innerHTML = 666;
+        document.getElementById("sleepTime").innerHTML = 420;
+        document.getElementById("generalTime").innerHTML = 120;
+        document.getElementById("readingTime").innerHTML = 60;
+        document.getElementById("socialTime").innerHTML = 54;
+        document.getElementById("personalTime").innerHTML = 60;
+        document.getElementById("bufferTime").innerHTML = 60;
+    }
+    else{
+        Buffer();
+    }
+}
+timeSet();
 
 // Toggle Functions
 
@@ -268,16 +289,6 @@ function Buffer() {
 }
 
 
-// Default Time Set
-
-document.getElementById("workTime").innerHTML = 666;
-document.getElementById("sleepTime").innerHTML = 420;
-document.getElementById("generalTime").innerHTML = 120;
-document.getElementById("readingTime").innerHTML = 60;
-document.getElementById("socialTime").innerHTML = 54;
-document.getElementById("personalTime").innerHTML = 60;
-document.getElementById("bufferTime").innerHTML = 60;
-
 
 // Wrok Counter
 
@@ -396,3 +407,6 @@ function bufferCounter() {
     }
 }
 setInterval(bufferCounter, 6000);
+
+
+
