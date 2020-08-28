@@ -44,7 +44,8 @@ setInterval(minCounter, 500);
 
 function timePenalty() {
     oldGypsyMan = minCounter();
-    penaltyTime = oldGypsyMan[0];
+//    penaltyTime = oldGypsyMan[0];
+    penaltyTime = 20;
     leftTime = oldGypsyMan[1];
     console.log(leftTime);
     switch (true) {
@@ -70,8 +71,8 @@ function timePenalty() {
             bufferTime.innerHTML = 0;
             break;
         }
-        
-          case penaltyTime > 120: {
+
+        case penaltyTime > 120: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
             generalTime.innerHTML = 120 - (120 - leftTime);
@@ -81,28 +82,34 @@ function timePenalty() {
             bufferTime.innerHTML = 0;
             break;
         }
-            
-         case penaltyTime > 60: {
+
+        case penaltyTime > 60: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
-            generalTime.innerHTML = 60 - (60 - leftTime);;
-            readingTime.innerHTML = 0;
+            generalTime.innerHTML = 60;
+            readingTime.innerHTML = 60;
             socialTime.innerHTML = 0;
-            personalTime.innerHTML = 0;
+            personalTime.innerHTML = 60 - (60 - leftTime);
             bufferTime.innerHTML = 0;
+//            if (personalTime.innerHTML == 0) {
+//                orkTime.innerHTML = 666;
+//                sleepTime.innerHTML = 420;
+//                generalTime.innerHTML = 60;
+//                readingTime.innerHTML = 60 ( 120 - leftTime);
+//                socialTime.innerHTML = 0;
+//                personalTime.innerHTML = 60;
+//                bufferTime.innerHTML = 0;
+//            }
             break;
         }
-            
-     
-            
-         case penaltyTime > 54: {
+        case penaltyTime <= 60: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
             generalTime.innerHTML = 120;
             readingTime.innerHTML = 60;
-            socialTime.innerHTML = 54- (54 - leftTime);;
-            personalTime.innerHTML = 0;
-            bufferTime.innerHTML = 0;
+            socialTime.innerHTML = 54;
+            personalTime.innerHTML = 60;
+            bufferTime.innerHTML = 60 - (60 - leftTime);
             break;
         }
     }
@@ -113,7 +120,7 @@ function timePenalty() {
 
 function timeSet() {
     if ((h + m + s) == 0) {
-        workTime.innerHTML =  666;
+        workTime.innerHTML = 666;
         sleepTime.innerHTML = 420;
         generalTime.innerHTML = 120;
         readingTime.innerHTML = 60;
