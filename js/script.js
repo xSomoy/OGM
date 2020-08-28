@@ -14,33 +14,114 @@ var s = now.format("ss");
 var h = now.format("HH");
 var m = now.format("mm");
 
+var workTime = document.getElementById("workTime");
+var sleepTime = document.getElementById("sleepTime");
+var generalTime = document.getElementById("generalTime");
+var readingTime = document.getElementById("readingTime");
+var socialTime = document.getElementById("socialTime");
+var personalTime = document.getElementById("personalTime");
+var bufferTime = document.getElementById("bufferTime");
+
+
 // Main Min Counter
 
 function minCounter() {
+    var now = new moment();
+    var s = now.format("ss");
+    var h = now.format("HH");
+    var m = now.format("mm");
     var minGone = ((h * 60) + Number(m));
     var minLeft = 1440 - Number(minGone);
     var inSec = 60 - Number(s);
     document.getElementById("time").innerHTML = minGone + ':' + s;
     document.getElementById("left").innerHTML = minLeft + ':' + inSec;
+    return [minGone, minLeft];
 }
 
 setInterval(minCounter, 500);
 
+// Time Penalty
+
+function timePenalty() {
+    oldGypsyMan = minCounter();
+    penaltyTime = oldGypsyMan[0];
+    leftTime = oldGypsyMan[1];
+    console.log(leftTime);
+    switch (true) {
+
+        case penaltyTime > 666: {
+            workTime.innerHTML = 666 - (666 - leftTime);
+            sleepTime.innerHTML = 0;
+            generalTime.innerHTML = 0;
+            readingTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
+            personalTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+
+        case penaltyTime > 420: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 420 - (420 - leftTime);
+            generalTime.innerHTML = 0;
+            readingTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
+            personalTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+        
+          case penaltyTime > 120: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 420;
+            generalTime.innerHTML = 120 - (120 - leftTime);
+            readingTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
+            personalTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+            
+         case penaltyTime > 60: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 420;
+            generalTime.innerHTML = 60 - (60 - leftTime);;
+            readingTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
+            personalTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+            
+     
+            
+         case penaltyTime > 54: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 420;
+            generalTime.innerHTML = 120;
+            readingTime.innerHTML = 60;
+            socialTime.innerHTML = 54- (54 - leftTime);;
+            personalTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+    }
+
+}
 
 // Time Set
 
 function timeSet() {
-    if ((h+m+s) == 0){
-        document.getElementById("workTime").innerHTML = 666;
-        document.getElementById("sleepTime").innerHTML = 420;
-        document.getElementById("generalTime").innerHTML = 120;
-        document.getElementById("readingTime").innerHTML = 60;
-        document.getElementById("socialTime").innerHTML = 54;
-        document.getElementById("personalTime").innerHTML = 60;
-        document.getElementById("bufferTime").innerHTML = 60;
-    }
-    else{
-        Buffer();
+    if ((h + m + s) == 0) {
+        workTime.innerHTML =  666;
+        sleepTime.innerHTML = 420;
+        generalTime.innerHTML = 120;
+        readingTime.innerHTML = 60;
+        socialTime.innerHTML = 54;
+        personalTime.innerHTML = 60;
+        bufferTime.innerHTML = 60;
+    } else {
+        timePenalty();
     }
 }
 timeSet();
@@ -407,6 +488,3 @@ function bufferCounter() {
     }
 }
 setInterval(bufferCounter, 6000);
-
-
-
