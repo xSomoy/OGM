@@ -45,65 +45,92 @@ setInterval(minCounter, 500);
 function timePenalty() {
     oldGypsyMan = minCounter();
     penaltyTime = oldGypsyMan[0];
+//    penaltyTime = 5;
     leftTime = oldGypsyMan[1];
+    console.log(penaltyTime);
+    console.log(leftTime);
     switch (true) {
 
-        case penaltyTime > 666: {
-            workTime.innerHTML = 666 - (666 - penaltyTime);
+        case penaltyTime > 1194: {
+            workTime.innerHTML = 1194 - penaltyTime;
             sleepTime.innerHTML = 0;
-            generalTime.innerHTML = 0;
             readingTime.innerHTML = 0;
-            socialTime.innerHTML = 0;
+            generalTime.innerHTML = 0;
             personalTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
             bufferTime.innerHTML = 0;
             break;
         }
 
-        case penaltyTime > 420: {
+        case penaltyTime > 774: {
             workTime.innerHTML = 666;
-            sleepTime.innerHTML = 420 - (420 - penaltyTime);
-            generalTime.innerHTML = 0;
+            sleepTime.innerHTML = 774 - penaltyTime;
             readingTime.innerHTML = 0;
-            socialTime.innerHTML = 0;
+            generalTime.innerHTML = 0;
             personalTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
             bufferTime.innerHTML = 0;
             break;
         }
 
-        case penaltyTime > 120: {
+        case penaltyTime > 354: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
-            generalTime.innerHTML = 120 - (120 - penaltyTime);
-            readingTime.innerHTML = 0;
-            socialTime.innerHTML = 0;
+            readingTime.innerHTML = 354 - penaltyTime;
+            generalTime.innerHTML = 0;
             personalTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+            
+        case penaltyTime > 174: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 420;
+            readingTime.innerHTML = 60;
+            generalTime.innerHTML = 234 - penaltyTime;
+            personalTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
             bufferTime.innerHTML = 0;
             break;
         }
 
+        case penaltyTime > 114: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 420;
+            readingTime.innerHTML = 60;
+            generalTime.innerHTML = 60;
+            personalTime.innerHTML = 174 - penaltyTime;
+            socialTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+        
         case penaltyTime > 60: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
-            generalTime.innerHTML = 60;
             readingTime.innerHTML = 60;
-            socialTime.innerHTML = 0;
-            personalTime.innerHTML = 60 - (60 - penaltyTime);
+            generalTime.innerHTML = 60;
+            personalTime.innerHTML = 60
+            socialTime.innerHTML = 114 - penaltyTime;
             bufferTime.innerHTML = 0;
             break;
         }
         case penaltyTime <= 60: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
-            generalTime.innerHTML = 120;
             readingTime.innerHTML = 60;
-            socialTime.innerHTML = 54;
+            generalTime.innerHTML = 120;
             personalTime.innerHTML = 60;
-            bufferTime.innerHTML = 60 - (60 - penaltyTime);
+            socialTime.innerHTML = 54;
+            bufferTime.innerHTML = 60 - penaltyTime;
             break;
         }
     }
 
 }
+
+timePenalty();
 
 // Time Set
 
@@ -116,11 +143,9 @@ function timeSet() {
         socialTime.innerHTML = 54;
         personalTime.innerHTML = 60;
         bufferTime.innerHTML = 60;
-    } else {
-        timePenalty();
     }
 }
-timeSet();
+setInterval(timeSet, 1000)
 
 // Toggle Functions
 
@@ -381,7 +406,7 @@ function workCounter() {
         document.getElementById("workTime").innerHTML = work;
     }
 }
-setInterval(workCounter, 6000);
+setInterval(workCounter, 60000);
 
 
 // Sleep Counter
@@ -398,7 +423,7 @@ function sleepCounter() {
         document.getElementById("sleepTime").innerHTML = sleep;
     }
 }
-setInterval(sleepCounter, 6000);
+setInterval(sleepCounter, 60000);
 
 
 // General Counter
@@ -415,7 +440,7 @@ function generalCounter() {
         document.getElementById("generalTime").innerHTML = general;
     }
 }
-setInterval(generalCounter, 6000);
+setInterval(generalCounter, 60000);
 
 
 // Reading Counter
@@ -432,7 +457,7 @@ function readingCounter() {
         document.getElementById("readingTime").innerHTML = reading;
     }
 }
-setInterval(readingCounter, 6000);
+setInterval(readingCounter, 60000);
 
 
 // Social Counter
@@ -449,7 +474,7 @@ function socialCounter() {
         document.getElementById("socialTime").innerHTML = social;
     }
 }
-setInterval(socialCounter, 6000);
+setInterval(socialCounter, 60000);
 
 
 // Personal Counter
@@ -466,7 +491,7 @@ function personalCounter() {
         document.getElementById("personalTime").innerHTML = personal;
     }
 }
-setInterval(personalCounter, 6000);
+setInterval(personalCounter, 60000);
 
 
 // Buffer Counter
@@ -483,4 +508,4 @@ function bufferCounter() {
         document.getElementById("bufferTime").innerHTML = buffer;
     }
 }
-setInterval(bufferCounter, 6000);
+setInterval(bufferCounter, 60000);
