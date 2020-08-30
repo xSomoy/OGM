@@ -40,6 +40,10 @@ function minCounter() {
 
 setInterval(minCounter, 500);
 
+
+// Schedule
+
+
 // Time Penalty
 
 function timePenalty() {
@@ -73,10 +77,10 @@ function timePenalty() {
             break;
         }
 
-        case penaltyTime > 354: {
+        case penaltyTime > 234: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
-            readingTime.innerHTML = 354 - penaltyTime;
+            readingTime.innerHTML = 294 - penaltyTime;
             generalTime.innerHTML = 0;
             personalTime.innerHTML = 0;
             socialTime.innerHTML = 0;
@@ -134,7 +138,7 @@ timePenalty();
 
 // Time Set
 
-function timeSet() {
+function timeReset() {
     if (Number(h + m + s) == 0) {
         workTime.innerHTML = 666;
         sleepTime.innerHTML = 420;
@@ -145,7 +149,7 @@ function timeSet() {
         bufferTime.innerHTML = 60;
     }
 }
-setInterval(timeSet, 1000)
+setInterval(timeReset, 1000)
 
 // Toggle Functions
 
