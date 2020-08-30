@@ -45,7 +45,7 @@ setInterval(minCounter, 500);
 function timePenalty() {
     oldGypsyMan = minCounter();
     penaltyTime = oldGypsyMan[0];
-//    penaltyTime = 5;
+    //    penaltyTime = 5;
     leftTime = oldGypsyMan[1];
     console.log(penaltyTime);
     console.log(leftTime);
@@ -83,7 +83,7 @@ function timePenalty() {
             bufferTime.innerHTML = 0;
             break;
         }
-            
+
         case penaltyTime > 174: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
@@ -105,7 +105,7 @@ function timePenalty() {
             bufferTime.innerHTML = 0;
             break;
         }
-        
+
         case penaltyTime > 60: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
@@ -135,7 +135,7 @@ timePenalty();
 // Time Set
 
 function timeSet() {
-    if (Number(h+m+s) == 0) {
+    if (Number(h + m + s) == 0) {
         workTime.innerHTML = 666;
         sleepTime.innerHTML = 420;
         generalTime.innerHTML = 120;
@@ -150,243 +150,267 @@ setInterval(timeSet, 1000)
 // Toggle Functions
 
 function Work() {
-    var status = workButton.innerText;
-    if (status == "Work") {
+    if (workTime.innerHTML == 0) {
+        alert('No Work Time Left');
+    } else {
+        var status = workButton.innerText;
+        if (status == "Work") {
 
-        workButton.innerHTML = 'Work Time';
-        workButton.style.background = 'green';
+            workButton.innerHTML = 'Work Time';
+            workButton.style.background = 'green';
 
-        // Toggle Other Button
+            // Toggle Other Button
 
-        sleepButton.innerHTML = 'Sleep';
-        sleepButton.style.background = 'red';
+            sleepButton.innerHTML = 'Sleep';
+            sleepButton.style.background = 'red';
 
-        generalButton.innerHTML = 'General';
-        generalButton.style.background = 'red';
+            generalButton.innerHTML = 'General';
+            generalButton.style.background = 'red';
 
-        readingButton.innerHTML = 'Reading';
-        readingButton.style.background = 'red';
+            readingButton.innerHTML = 'Reading';
+            readingButton.style.background = 'red';
 
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
+            socialButton.innerHTML = 'Social';
+            socialButton.style.background = 'red';
 
-        personalButton.innerHTML = 'Personal';
-        personalButton.style.background = 'red';
+            personalButton.innerHTML = 'Personal';
+            personalButton.style.background = 'red';
 
-        bufferButton.innerHTML = 'Buffer';
-        bufferButton.style.background = 'red';
+            bufferButton.innerHTML = 'Buffer';
+            bufferButton.style.background = 'red';
 
 
-    } else if (status == "Work Time") {
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
-
+        } else if (status == "Work Time") {
+            workButton.innerHTML = 'Work';
+            workButton.style.background = 'red';
+        }
     }
 }
 
 function Sleep() {
-    var status = sleepButton.innerText;
-    if (status == "Sleep") {
+    if (sleepTime.innerHTML == 0) {
+        alert('No Sleep Time Left');
+    } else {
+        var status = sleepButton.innerText;
+        if (status == "Sleep") {
 
-        sleepButton.innerHTML = 'Sleep Time';
-        sleepButton.style.background = 'green';
+            sleepButton.innerHTML = 'Sleep Time';
+            sleepButton.style.background = 'green';
 
-        // Toggle Other Button
+            // Toggle Other Button
 
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
+            workButton.innerHTML = 'Work';
+            workButton.style.background = 'red';
 
-        generalButton.innerHTML = 'General';
-        generalButton.style.background = 'red';
+            generalButton.innerHTML = 'General';
+            generalButton.style.background = 'red';
 
-        readingButton.innerHTML = 'Reading';
-        readingButton.style.background = 'red';
+            readingButton.innerHTML = 'Reading';
+            readingButton.style.background = 'red';
 
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
+            socialButton.innerHTML = 'Social';
+            socialButton.style.background = 'red';
 
-        personalButton.innerHTML = 'Personal';
-        personalButton.style.background = 'red';
+            personalButton.innerHTML = 'Personal';
+            personalButton.style.background = 'red';
 
-        bufferButton.innerHTML = 'Buffer';
-        bufferButton.style.background = 'red';
+            bufferButton.innerHTML = 'Buffer';
+            bufferButton.style.background = 'red';
 
-    } else if (status == "Sleep Time") {
-        sleepButton.innerHTML = 'Sleep';
-        sleepButton.style.background = 'red';
-
-    }
-}
-
-function General() {
-    var status = generalButton.innerText;
-    if (status == "General") {
-
-        generalButton.innerHTML = 'General Time';
-        generalButton.style.background = 'green';
-
-        // Toggle Other Button
-
-        sleepButton.innerHTML = 'Sleep';
-        sleepButton.style.background = 'red';
-
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
-
-        readingButton.innerHTML = 'Reading';
-        readingButton.style.background = 'red';
-
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
-
-        personalButton.innerHTML = 'Personal';
-        personalButton.style.background = 'red';
-
-        bufferButton.innerHTML = 'Buffer';
-        bufferButton.style.background = 'red';
-
-    } else if (status == "General Time") {
-        generalButton.innerHTML = 'General';
-        generalButton.style.background = 'red';
-
+        } else if (status == "Sleep Time") {
+            sleepButton.innerHTML = 'Sleep';
+            sleepButton.style.background = 'red';
+        }
     }
 }
 
 function Reading() {
-    var status = readingButton.innerText;
-    if (status == "Reading") {
+    if (readingTime.innerHTML == 0) {
+        alert('No Reading Time Left');
+    } else {
+        var status = readingButton.innerText;
+        if (status == "Reading") {
 
-        readingButton.innerHTML = 'Reading Time';
-        readingButton.style.background = 'green';
+            readingButton.innerHTML = 'Reading Time';
+            readingButton.style.background = 'green';
 
-        // Toggle Other Button
+            // Toggle Other Button
 
-        sleepButton.innerHTML = 'Sleep';
-        sleepButton.style.background = 'red';
+            sleepButton.innerHTML = 'Sleep';
+            sleepButton.style.background = 'red';
 
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
+            workButton.innerHTML = 'Work';
+            workButton.style.background = 'red';
 
-        generalButton.innerHTML = 'General';
-        generalButton.style.background = 'red';
+            generalButton.innerHTML = 'General';
+            generalButton.style.background = 'red';
 
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
+            socialButton.innerHTML = 'Social';
+            socialButton.style.background = 'red';
 
-        personalButton.innerHTML = 'Personal';
-        personalButton.style.background = 'red';
+            personalButton.innerHTML = 'Personal';
+            personalButton.style.background = 'red';
 
-        bufferButton.innerHTML = 'Buffer';
-        bufferButton.style.background = 'red';
+            bufferButton.innerHTML = 'Buffer';
+            bufferButton.style.background = 'red';
 
-    } else if (status == "Reading Time") {
-        readingButton.innerHTML = 'Reading';
-        readingButton.style.background = 'red';
-
+        } else if (status == "Reading Time") {
+            readingButton.innerHTML = 'Reading';
+            readingButton.style.background = 'red';
+        }
     }
 }
 
-function Social() {
-    var status = socialButton.innerText;
-    if (status == "Social") {
+function General() {
+    if (generalTime.innerHTML == 0) {
+        alert('No General Time Left');
+    } else {
+        var status = generalButton.innerText;
+        if (status == "General") {
 
-        socialButton.innerHTML = 'Social Time';
-        socialButton.style.background = 'green';
+            generalButton.innerHTML = 'General Time';
+            generalButton.style.background = 'green';
 
-        // Toggle Other Button
+            // Toggle Other Button
 
-        sleepButton.innerHTML = 'Sleep';
-        sleepButton.style.background = 'red';
+            sleepButton.innerHTML = 'Sleep';
+            sleepButton.style.background = 'red';
 
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
+            workButton.innerHTML = 'Work';
+            workButton.style.background = 'red';
 
-        generalButton.innerHTML = 'General';
-        generalButton.style.background = 'red';
+            readingButton.innerHTML = 'Reading';
+            readingButton.style.background = 'red';
 
-        readingButton.innerHTML = 'Reading';
-        readingButton.style.background = 'red';
+            socialButton.innerHTML = 'Social';
+            socialButton.style.background = 'red';
 
-        personalButton.innerHTML = 'Personal';
-        personalButton.style.background = 'red';
+            personalButton.innerHTML = 'Personal';
+            personalButton.style.background = 'red';
 
-        bufferButton.innerHTML = 'Buffer';
-        bufferButton.style.background = 'red';
+            bufferButton.innerHTML = 'Buffer';
+            bufferButton.style.background = 'red';
 
-    } else if (status == "Social Time") {
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
-
+        } else if (status == "General Time") {
+            generalButton.innerHTML = 'General';
+            generalButton.style.background = 'red';
+        }
     }
 }
+
 
 
 function Personal() {
-    var status = personalButton.innerText;
-    if (status == "Personal") {
+    if (personalTime.innerHTML == 0) {
+        alert('No Personal Time Left');
+    } else {
+        var status = personalButton.innerText;
+        if (status == "Personal") {
 
-        personalButton.innerHTML = 'Personal Time';
-        personalButton.style.background = 'green';
+            personalButton.innerHTML = 'Personal Time';
+            personalButton.style.background = 'green';
 
-        // Toggle Other Button
+            // Toggle Other Button
 
-        sleepButton.innerHTML = 'Sleep';
-        sleepButton.style.background = 'red';
+            sleepButton.innerHTML = 'Sleep';
+            sleepButton.style.background = 'red';
 
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
+            workButton.innerHTML = 'Work';
+            workButton.style.background = 'red';
 
-        generalButton.innerHTML = 'General';
-        generalButton.style.background = 'red';
+            generalButton.innerHTML = 'General';
+            generalButton.style.background = 'red';
 
-        readingButton.innerHTML = 'Reading';
-        readingButton.style.background = 'red';
+            readingButton.innerHTML = 'Reading';
+            readingButton.style.background = 'red';
 
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
+            socialButton.innerHTML = 'Social';
+            socialButton.style.background = 'red';
 
-        bufferButton.innerHTML = 'Buffer';
-        bufferButton.style.background = 'red';
+            bufferButton.innerHTML = 'Buffer';
+            bufferButton.style.background = 'red';
 
-    } else if (status == "Personal Time") {
-        personalButton.innerHTML = 'Personal';
-        personalButton.style.background = 'red';
+        } else if (status == "Personal Time") {
+            personalButton.innerHTML = 'Personal';
+            personalButton.style.background = 'red';
+        }
+    }
+}
 
+
+function Social() {
+    if (socialTime.innerHTML == 0) {
+        alert('No Social Time Left');
+    } else {
+        var status = socialButton.innerText;
+        if (status == "Social") {
+
+            socialButton.innerHTML = 'Social Time';
+            socialButton.style.background = 'green';
+
+            // Toggle Other Button
+
+            sleepButton.innerHTML = 'Sleep';
+            sleepButton.style.background = 'red';
+
+            workButton.innerHTML = 'Work';
+            workButton.style.background = 'red';
+
+            generalButton.innerHTML = 'General';
+            generalButton.style.background = 'red';
+
+            readingButton.innerHTML = 'Reading';
+            readingButton.style.background = 'red';
+
+            personalButton.innerHTML = 'Personal';
+            personalButton.style.background = 'red';
+
+            bufferButton.innerHTML = 'Buffer';
+            bufferButton.style.background = 'red';
+
+        } else if (status == "Social Time") {
+            socialButton.innerHTML = 'Social';
+            socialButton.style.background = 'red';
+        }
     }
 }
 
 
 function Buffer() {
-    var status = bufferButton.innerText;
-    if (status == "Buffer") {
+    if (bufferTime.innerHTML == 0) {
+        alert('No Buffer Time Left');
+    } else {
+        var status = bufferButton.innerText;
+        if (status == "Buffer") {
 
-        bufferButton.innerHTML = 'Buffer Time';
-        bufferButton.style.background = 'green';
+            bufferButton.innerHTML = 'Buffer Time';
+            bufferButton.style.background = 'green';
 
-        // Toggle Other Button
+            // Toggle Other Button
 
-        sleepButton.innerHTML = 'Sleep';
-        sleepButton.style.background = 'red';
+            sleepButton.innerHTML = 'Sleep';
+            sleepButton.style.background = 'red';
 
-        workButton.innerHTML = 'Work';
-        workButton.style.background = 'red';
+            workButton.innerHTML = 'Work';
+            workButton.style.background = 'red';
 
-        generalButton.innerHTML = 'General';
-        generalButton.style.background = 'red';
+            generalButton.innerHTML = 'General';
+            generalButton.style.background = 'red';
 
-        readingButton.innerHTML = 'Reading';
-        readingButton.style.background = 'red';
+            readingButton.innerHTML = 'Reading';
+            readingButton.style.background = 'red';
 
-        socialButton.innerHTML = 'Social';
-        socialButton.style.background = 'red';
+            socialButton.innerHTML = 'Social';
+            socialButton.style.background = 'red';
 
-        personalButton.innerHTML = 'Personal';
-        personalButton.style.background = 'red';
+            personalButton.innerHTML = 'Personal';
+            personalButton.style.background = 'red';
 
-    } else if (status == "Buffer Time") {
-        bufferButton.innerHTML = 'Buffer';
-        bufferButton.style.background = 'red';
+        } else if (status == "Buffer Time") {
+            bufferButton.innerHTML = 'Buffer';
+            bufferButton.style.background = 'red';
 
+        }
     }
 }
 
