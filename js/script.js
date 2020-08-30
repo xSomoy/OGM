@@ -55,7 +55,7 @@ function timePenalty() {
     console.log(leftTime);
     switch (true) {
 
-        case penaltyTime > 1194: {
+        case penaltyTime > 774: {
             workTime.innerHTML = 1194 - penaltyTime;
             sleepTime.innerHTML = 0;
             readingTime.innerHTML = 0;
@@ -66,7 +66,7 @@ function timePenalty() {
             break;
         }
 
-        case penaltyTime > 774: {
+        case penaltyTime > 354: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 774 - penaltyTime;
             readingTime.innerHTML = 0;
@@ -80,7 +80,7 @@ function timePenalty() {
         case penaltyTime > 234: {
             workTime.innerHTML = 666;
             sleepTime.innerHTML = 420;
-            readingTime.innerHTML = 294 - penaltyTime;
+            readingTime.innerHTML = 354 - penaltyTime;
             generalTime.innerHTML = 0;
             personalTime.innerHTML = 0;
             socialTime.innerHTML = 0;
