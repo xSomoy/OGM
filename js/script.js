@@ -59,7 +59,12 @@ setInterval(time, 500);
 
 function timePenalty() {
     oldGypsyMan = minCounter();
-    penaltyTime = oldGypsyMan[0] - 420;
+    penaltyTime = oldGypsyMan[0]
+    if ( penaltyTime < 420)
+        penaltyTime= 420 - penaltyTime;
+    else
+        penaltyTime = penaltyTime - 420;
+    
     leftTime = oldGypsyMan[1];
     console.log(penaltyTime);
     console.log(leftTime);
