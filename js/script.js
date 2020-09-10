@@ -35,13 +35,24 @@ function minCounter() {
     var inSec = 60 - Number(s);
     document.getElementById("time").innerHTML = minGone + ':' + s;
     document.getElementById("left").innerHTML = minLeft + ':' + inSec;
-    return [minGone, minLeft];
+    return [minGone, minLeft, s, m, h];
 }
 
 setInterval(minCounter, 500);
 
 
 // Schedule
+
+function time() {
+    var now = new moment();
+    var s = now.format("ss");
+    if (s == 0)
+        return 1;
+     else 
+        return 0;
+}
+
+setInterval(time, 500);
 
 
 // Time Penalty
@@ -134,7 +145,7 @@ function timePenalty() {
 
 }
 
-timePenalty();
+//timePenalty();
 
 // Time Set
 
@@ -149,7 +160,7 @@ function timeReset() {
         bufferTime.innerHTML = 60;
     }
 }
-setInterval(timeReset, 1000)
+//setInterval(timeReset, 1000)
 
 // Toggle Functions
 
@@ -426,7 +437,7 @@ function workCounter() {
     var status = workButton.innerText;
     if (status == 'Work Time') {
         var workTime = document.getElementById("workTime").innerHTML;
-        workTime = workTime - 1;
+        workTime = workTime - time();
         document.getElementById("workTime").innerHTML = workTime;
 
     } else {
@@ -434,7 +445,7 @@ function workCounter() {
         document.getElementById("workTime").innerHTML = work;
     }
 }
-setInterval(workCounter, 60000);
+setInterval(workCounter, 1000);
 
 
 // Sleep Counter
@@ -443,7 +454,7 @@ function sleepCounter() {
     var status = sleepButton.innerText;
     if (status == 'Sleep Time') {
         var sleepTime = document.getElementById("sleepTime").innerHTML;
-        sleepTime = sleepTime - 1;
+        sleepTime = sleepTime - time();
         document.getElementById("sleepTime").innerHTML = sleepTime;
 
     } else {
@@ -451,7 +462,7 @@ function sleepCounter() {
         document.getElementById("sleepTime").innerHTML = sleep;
     }
 }
-setInterval(sleepCounter, 60000);
+setInterval(sleepCounter, 1000);
 
 
 // General Counter
@@ -460,7 +471,7 @@ function generalCounter() {
     var status = generalButton.innerText;
     if (status == 'General Time') {
         var generalTime = document.getElementById("generalTime").innerHTML;
-        generalTime = generalTime - 1;
+        generalTime = generalTime - time();
         document.getElementById("generalTime").innerHTML = generalTime;
 
     } else {
@@ -468,7 +479,7 @@ function generalCounter() {
         document.getElementById("generalTime").innerHTML = general;
     }
 }
-setInterval(generalCounter, 60000);
+setInterval(generalCounter, 1000);
 
 
 // Reading Counter
@@ -477,7 +488,7 @@ function readingCounter() {
     var status = readingButton.innerText;
     if (status == 'Reading Time') {
         var readingTime = document.getElementById("readingTime").innerHTML;
-        readingTime = readingTime - 1;
+        readingTime = readingTime - time();
         document.getElementById("readingTime").innerHTML = readingTime;
 
     } else {
@@ -485,7 +496,7 @@ function readingCounter() {
         document.getElementById("readingTime").innerHTML = reading;
     }
 }
-setInterval(readingCounter, 60000);
+setInterval(readingCounter, 1000);
 
 
 // Social Counter
@@ -502,7 +513,7 @@ function socialCounter() {
         document.getElementById("socialTime").innerHTML = social;
     }
 }
-setInterval(socialCounter, 60000);
+setInterval(socialCounter, 1000);
 
 
 // Personal Counter
@@ -511,7 +522,7 @@ function personalCounter() {
     var status = personalButton.innerText;
     if (status == 'Personal Time') {
         var personalTime = document.getElementById("personalTime").innerHTML;
-        personalTime = personalTime - 1;
+        personalTime = personalTime - time();
         document.getElementById("personalTime").innerHTML = personalTime;
 
     } else {
@@ -519,7 +530,7 @@ function personalCounter() {
         document.getElementById("personalTime").innerHTML = personal;
     }
 }
-setInterval(personalCounter, 60000);
+setInterval(personalCounter, 1000);
 
 
 // Buffer Counter
@@ -528,7 +539,7 @@ function bufferCounter() {
     var status = bufferButton.innerText;
     if (status == 'Buffer Time') {
         var bufferTime = document.getElementById("bufferTime").innerHTML;
-        bufferTime = bufferTime - 1;
+        bufferTime = bufferTime - time();
         document.getElementById("bufferTime").innerHTML = bufferTime;
 
     } else {
@@ -536,4 +547,4 @@ function bufferCounter() {
         document.getElementById("bufferTime").innerHTML = buffer;
     }
 }
-setInterval(bufferCounter, 60000);
+setInterval(bufferCounter, 1000);
