@@ -63,8 +63,7 @@ function timePenalty() {
     if ( penaltyTime < 420)
         penaltyTime= 420 - penaltyTime;
     else
-        penaltyTime = penaltyTime - 420;
-    
+        penaltyTime = penaltyTime;
     leftTime = oldGypsyMan[1];
     console.log(penaltyTime);
     console.log(leftTime);
@@ -137,8 +136,6 @@ function timePenalty() {
     }
 
 }
-
-timePenalty();
 
 // Time Set
 
