@@ -59,14 +59,13 @@ setInterval(time, 500);
 
 function timePenalty() {
     oldGypsyMan = minCounter();
-    penaltyTime = oldGypsyMan[0];
-    //    penaltyTime = 5;
+    penaltyTime = oldGypsyMan[0] - 420;
     leftTime = oldGypsyMan[1];
     console.log(penaltyTime);
     console.log(leftTime);
     switch (true) {
 
-        case penaltyTime > 774: {
+        case penaltyTime > 354: {
             workTime.innerHTML = 1440 - penaltyTime;
             sleepTime.innerHTML = 0;
             readingTime.innerHTML = 0;
@@ -77,20 +76,9 @@ function timePenalty() {
             break;
         }
 
-        case penaltyTime > 354: {
-            workTime.innerHTML = 666;
-            sleepTime.innerHTML = 774 - penaltyTime;
-            readingTime.innerHTML = 0;
-            generalTime.innerHTML = 0;
-            personalTime.innerHTML = 0;
-            socialTime.innerHTML = 0;
-            bufferTime.innerHTML = 0;
-            break;
-        }
-
         case penaltyTime > 294: {
             workTime.innerHTML = 666;
-            sleepTime.innerHTML = 420;
+            sleepTime.innerHTML = 0;
             readingTime.innerHTML = 354 - penaltyTime;
             generalTime.innerHTML = 0;
             personalTime.innerHTML = 0;
@@ -101,7 +89,7 @@ function timePenalty() {
 
         case penaltyTime > 174: {
             workTime.innerHTML = 666;
-            sleepTime.innerHTML = 420;
+            sleepTime.innerHTML = 0;
             readingTime.innerHTML = 60;
             generalTime.innerHTML = 294 - penaltyTime;
             personalTime.innerHTML = 0;
@@ -112,7 +100,7 @@ function timePenalty() {
 
         case penaltyTime > 114: {
             workTime.innerHTML = 666;
-            sleepTime.innerHTML = 420;
+            sleepTime.innerHTML = 0;
             readingTime.innerHTML = 60;
             generalTime.innerHTML = 60;
             personalTime.innerHTML = 174 - penaltyTime;
@@ -123,7 +111,7 @@ function timePenalty() {
 
         case penaltyTime > 60: {
             workTime.innerHTML = 666;
-            sleepTime.innerHTML = 420;
+            sleepTime.innerHTML = 0;
             readingTime.innerHTML = 60;
             generalTime.innerHTML = 60;
             personalTime.innerHTML = 60
@@ -133,7 +121,7 @@ function timePenalty() {
         }
         case penaltyTime <= 60: {
             workTime.innerHTML = 666;
-            sleepTime.innerHTML = 420;
+            sleepTime.innerHTML = 0;
             readingTime.innerHTML = 60;
             generalTime.innerHTML = 120;
             personalTime.innerHTML = 60;
@@ -145,7 +133,7 @@ function timePenalty() {
 
 }
 
-//timePenalty();
+timePenalty();
 
 // Time Set
 
