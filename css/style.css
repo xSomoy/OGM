@@ -1,11 +1,64 @@
-Button {
+h1 {
     color: white;
-    background: red;
-    padding: 10px;
-    margin: 20px;
+    font-family: fantasy;
+    font-size: 30px;
 }
 
-body {
-    background-color: #98b2c7;
+#time, #left {
+    color: #FFFFFF;
+    font-weight: 800;
+    }
+
+
+Button {
+    color: white;
+    background: #333333;
+    padding: 10px;
+    margin: 20px;
+    border: none;
     text-align: center;
+    font-family: fantasy;
+    font-weight: 800;
+    font-size: 15px;
+    color: #f1f1f1;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+body {
+    background: url(../Images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    color: #f1f1f1;
+    margin-left: 30px;
+}
+
+.text span {
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.text {
+    text-align: left;
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 25px;
+    color: #272727;
+}
+
+
+
+.button {
+    padding-top: 10px;
+    text-align: center;
+    display: flex;
 }
