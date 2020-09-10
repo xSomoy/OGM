@@ -49,7 +49,7 @@ function time() {
     var s = now.format("ss");
     if (s == 0)
         return 1;
-     else 
+    else
         return 0;
 }
 
@@ -58,24 +58,35 @@ setInterval(time, 500);
 
 // Piority Countdown Fucntion
 
-function pCountdown () {
-    if (bufferTime.innerHTML != '0' ) 
-        bufferTime.innerHTML = bufferTime.innerHTML - time();
-    else if (socialTime.innerHTML != '0')
-        socialTime.innerHTML = socialTime.innerHTML - time();
-    else if (personalTime.innerHTML != '0')
-        personalTime.innerHTML = personalTime.innerHTML - time();
-    else if (generalTime.innerHTML != '0')
-        generalTime.innerHTML = generalTime.innerHTML - time();
-    else if (readingTime.innerHTML != '0')
-        readingTime.innerHTML =readingTime.innerHTML - time();
-    else if (sleepTime.innerHTML != '0')
-        sleepTime.innerHTML = sleepTime.innerHTML - time();
-    else(workTime.innerHTML != '0')
-        workTime.innerHTML = workTime.innerHTML - time();
+function pCountdown() {
+    var act0 = sleepButton.innerHTML;
+    var act1 = workButton.innerHTML;
+    var act2 = generalButton.innerHTML;
+    var act3 = readingButton.innerHTML;
+    var act4 = socialButton.innerHTML;
+    var act5 = personalButton.innerHTML;
+    var act6 = bufferButton.innerHTML;
+    console.log( act0 , act1 , act2 , act3 , act4 , act5 , act6);
+
+    if (act0 == 'Sleep' & act1 == 'Work' & act2 == 'General' & act3 == 'Reading' & act4 == 'Social' & act5 == 'Personal' & act6 == 'Buffer') {
+        if (bufferTime.innerHTML != '0')
+            bufferTime.innerHTML = bufferTime.innerHTML - time();
+        else if (socialTime.innerHTML != '0')
+            socialTime.innerHTML = socialTime.innerHTML - time();
+        else if (personalTime.innerHTML != '0')
+            personalTime.innerHTML = personalTime.innerHTML - time();
+        else if (generalTime.innerHTML != '0')
+            generalTime.innerHTML = generalTime.innerHTML - time();
+        else if (readingTime.innerHTML != '0')
+            readingTime.innerHTML = readingTime.innerHTML - time();
+        else if (sleepTime.innerHTML != '0')
+            sleepTime.innerHTML = sleepTime.innerHTML - time();
+        else if(workTime.innerHTML != '0')
+            workTime.innerHTML = workTime.innerHTML - time();
+    }
 }
 
-setInterval (pCountdown, 1000);
+setInterval(pCountdown, 1000);
 
 
 // Time Penalty
@@ -83,8 +94,8 @@ setInterval (pCountdown, 1000);
 function timePenalty() {
     oldGypsyMan = minCounter();
     penaltyTime = oldGypsyMan[0]
-    if ( penaltyTime < 420)
-        penaltyTime= 420 - penaltyTime;
+    if (penaltyTime < 420)
+        penaltyTime = 420 - penaltyTime;
     else
         penaltyTime = penaltyTime;
     leftTime = oldGypsyMan[1];
