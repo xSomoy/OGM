@@ -9,6 +9,7 @@ const personalButton = document.getElementById('personalButton');
 const bufferButton = document.getElementById('bufferButton');
 
 // Declaring Variables
+
 var now = new moment();
 var s = now.format("ss");
 var h = now.format("HH");
@@ -41,7 +42,7 @@ function minCounter() {
 setInterval(minCounter, 500);
 
 
-// Schedule
+// Timer
 
 function time() {
     var now = new moment();
@@ -53,6 +54,28 @@ function time() {
 }
 
 setInterval(time, 500);
+
+
+// Piority Countdown Fucntion
+
+function pCountdown () {
+    if (bufferTime.innerHTML != '0' ) 
+        bufferTime.innerHTML = bufferTime.innerHTML - time();
+    else if (socialTime.innerHTML != '0')
+        socialTime.innerHTML = socialTime.innerHTML - time();
+    else if (personalTime.innerHTML != '0')
+        personalTime.innerHTML = personalTime.innerHTML - time();
+    else if (generalTime.innerHTML != '0')
+        generalTime.innerHTML = generalTime.innerHTML - time();
+    else if (readingTime.innerHTML != '0')
+        readingTime.innerHTML =readingTime.innerHTML - time();
+    else if (sleepTime.innerHTML != '0')
+        sleepTime.innerHTML = sleepTime.innerHTML - time();
+    else(workTime.innerHTML != '0')
+        workTime.innerHTML = workTime.innerHTML - time();
+}
+
+setInterval (pCountdown, 1000);
 
 
 // Time Penalty
@@ -137,10 +160,10 @@ function timePenalty() {
 
 }
 
-// Time Set
+// Time Reset
 
 function timeReset() {
-    if (Number(h + m + s) == 0) {
+//    if (Number(h + m + s) == 0) {
         workTime.innerHTML = 666;
         sleepTime.innerHTML = 420;
         generalTime.innerHTML = 120;
@@ -148,9 +171,8 @@ function timeReset() {
         socialTime.innerHTML = 54;
         personalTime.innerHTML = 60;
         bufferTime.innerHTML = 60;
-    }
+//    }
 }
-//setInterval(timeReset, 1000)
 
 // Toggle Functions
 
@@ -495,7 +517,7 @@ function socialCounter() {
     var status = socialButton.innerText;
     if (status == 'Social Time') {
         var socialTime = document.getElementById("socialTime").innerHTML;
-        socialTime = socialTime - 1;
+        socialTime = socialTime - time();
         document.getElementById("socialTime").innerHTML = socialTime;
 
     } else {
