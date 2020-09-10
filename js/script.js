@@ -66,7 +66,6 @@ function pCountdown() {
     var act4 = socialButton.innerHTML;
     var act5 = personalButton.innerHTML;
     var act6 = bufferButton.innerHTML;
-    console.log( act0 , act1 , act2 , act3 , act4 , act5 , act6);
 
     if (act0 == 'Sleep' & act1 == 'Work' & act2 == 'General' & act3 == 'Reading' & act4 == 'Social' & act5 == 'Personal' & act6 == 'Buffer') {
         if (bufferTime.innerHTML != '0')
@@ -81,7 +80,7 @@ function pCountdown() {
             readingTime.innerHTML = readingTime.innerHTML - time();
         else if (sleepTime.innerHTML != '0')
             sleepTime.innerHTML = sleepTime.innerHTML - time();
-        else if(workTime.innerHTML != '0')
+        else if (workTime.innerHTML != '0')
             workTime.innerHTML = workTime.innerHTML - time();
     }
 }
@@ -99,8 +98,6 @@ function timePenalty() {
     else
         penaltyTime = penaltyTime;
     leftTime = oldGypsyMan[1];
-    console.log(penaltyTime);
-    console.log(leftTime);
     switch (true) {
 
         case penaltyTime > 354: {
@@ -174,15 +171,15 @@ function timePenalty() {
 // Time Reset
 
 function timeReset() {
-//    if (Number(h + m + s) == 0) {
-        workTime.innerHTML = 666;
-        sleepTime.innerHTML = 420;
-        generalTime.innerHTML = 120;
-        readingTime.innerHTML = 60;
-        socialTime.innerHTML = 54;
-        personalTime.innerHTML = 60;
-        bufferTime.innerHTML = 60;
-//    }
+    //    if (Number(h + m + s) == 0) {
+    workTime.innerHTML = 666;
+    sleepTime.innerHTML = 420;
+    generalTime.innerHTML = 120;
+    readingTime.innerHTML = 60;
+    socialTime.innerHTML = 54;
+    personalTime.innerHTML = 60;
+    bufferTime.innerHTML = 60;
+    //    }
 }
 
 // Toggle Functions
@@ -571,3 +568,4 @@ function bufferCounter() {
     }
 }
 setInterval(bufferCounter, 1000);
+
