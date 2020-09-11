@@ -93,14 +93,76 @@ setInterval(pCountdown, 1000);
 function timePenalty() {
     oldGypsyMan = minCounter();
     penaltyTime = oldGypsyMan[0]
-    if (penaltyTime < 420)
-        penaltyTime = 420 - penaltyTime;
-    else
-        penaltyTime = penaltyTime;
     leftTime = oldGypsyMan[1];
     switch (true) {
 
-        case penaltyTime > 354: {
+        case penaltyTime < 420: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 420 - penaltyTime;
+            readingTime.innerHTML = 60;
+            generalTime.innerHTML = 120;
+            personalTime.innerHTML = 60;
+            socialTime.innerHTML = 54;
+            bufferTime.innerHTML = 60;
+            break;
+        }
+
+        case penaltyTime < 480: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 0;
+            readingTime.innerHTML = 60;
+            generalTime.innerHTML = 120;
+            personalTime.innerHTML = 60;
+            socialTime.innerHTML = 54;
+            bufferTime.innerHTML = 480 - penaltyTime;
+            break;
+        }
+
+        case penaltyTime < 534: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 0;
+            readingTime.innerHTML = 60;
+            generalTime.innerHTML = 60;
+            personalTime.innerHTML = 60
+            socialTime.innerHTML = 534 - penaltyTime;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+
+        case penaltyTime < 594: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 0;
+            readingTime.innerHTML = 60;
+            generalTime.innerHTML = 60;
+            personalTime.innerHTML = 594 - penaltyTime;
+            socialTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+
+        case penaltyTime < 714: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 0;
+            readingTime.innerHTML = 60;
+            generalTime.innerHTML = 714 - penaltyTime;
+            personalTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+
+        case penaltyTime < 774: {
+            workTime.innerHTML = 666;
+            sleepTime.innerHTML = 0;
+            readingTime.innerHTML = 774 - penaltyTime;
+            generalTime.innerHTML = 0;
+            personalTime.innerHTML = 0;
+            socialTime.innerHTML = 0;
+            bufferTime.innerHTML = 0;
+            break;
+        }
+
+        case penaltyTime < 1440: {
             workTime.innerHTML = 1440 - penaltyTime;
             sleepTime.innerHTML = 0;
             readingTime.innerHTML = 0;
@@ -111,78 +173,18 @@ function timePenalty() {
             break;
         }
 
-        case penaltyTime > 294: {
-            workTime.innerHTML = 666;
-            sleepTime.innerHTML = 0;
-            readingTime.innerHTML = 354 - penaltyTime;
-            generalTime.innerHTML = 0;
-            personalTime.innerHTML = 0;
-            socialTime.innerHTML = 0;
-            bufferTime.innerHTML = 0;
-            break;
-        }
 
-        case penaltyTime > 174: {
-            workTime.innerHTML = 666;
-            sleepTime.innerHTML = 0;
-            readingTime.innerHTML = 60;
-            generalTime.innerHTML = 294 - penaltyTime;
-            personalTime.innerHTML = 0;
-            socialTime.innerHTML = 0;
-            bufferTime.innerHTML = 0;
-            break;
-        }
 
-        case penaltyTime > 114: {
-            workTime.innerHTML = 666;
-            sleepTime.innerHTML = 0;
-            readingTime.innerHTML = 60;
-            generalTime.innerHTML = 60;
-            personalTime.innerHTML = 174 - penaltyTime;
-            socialTime.innerHTML = 0;
-            bufferTime.innerHTML = 0;
-            break;
-        }
 
-        case penaltyTime > 60: {
-            workTime.innerHTML = 666;
-            sleepTime.innerHTML = 0;
-            readingTime.innerHTML = 60;
-            generalTime.innerHTML = 60;
-            personalTime.innerHTML = 60
-            socialTime.innerHTML = 114 - penaltyTime;
-            bufferTime.innerHTML = 0;
-            break;
-        }
-        case penaltyTime <= 60: {
-            workTime.innerHTML = 666;
-            sleepTime.innerHTML = 0;
-            readingTime.innerHTML = 60;
-            generalTime.innerHTML = 120;
-            personalTime.innerHTML = 60;
-            socialTime.innerHTML = 54;
-            bufferTime.innerHTML = 60 - penaltyTime;
-            break;
-        }
+
+
+
+
+
     }
 
 }
 
-// Time Reset
-
-function timeReset() {
-    //    if (Number(h + m + s) == 0) {
-    workTime.innerHTML = 666;
-    sleepTime.innerHTML = 420;
-    generalTime.innerHTML = 120;
-    readingTime.innerHTML = 60;
-    socialTime.innerHTML = 54;
-    personalTime.innerHTML = 60;
-    bufferTime.innerHTML = 60;
-    //    }
-}
-
-// Toggle Functions
 
 function Work() {
     if (workTime.innerHTML == 0) {
@@ -568,4 +570,3 @@ function bufferCounter() {
     }
 }
 setInterval(bufferCounter, 1000);
-
